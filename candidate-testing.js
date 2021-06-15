@@ -5,7 +5,7 @@ const input = require('readline-sync');
 // TODO 1.1a: Define candidateName // 
 let candidateName = ('');
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question = ('Who was the first American woman in space? ');
+//let question = ('Who was the first American woman in space? ');
 let correctAnswer = ('Sally Ride');
 let candidateAnswer = ('');
 let questions = ['1) Who was the first American woman in space?', '2) True or False: 5 kilometers == 5000 meters?', '3) (5+3)/2 * 10 = ?', '4) Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2?', '5) What is the minimum crew size for the ISS?']; 
@@ -65,7 +65,7 @@ function runProgram() {
 // And don't change these or your program will not run as expected //
 module.exports = {
   candidateName: candidateName,
-  question: question,
+  //question: question,
   correctAnswer: correctAnswer,
   candidateAnswer: candidateAnswer,
   questions: questions,
