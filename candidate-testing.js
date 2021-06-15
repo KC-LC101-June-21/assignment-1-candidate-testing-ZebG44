@@ -5,7 +5,8 @@ const input = require('readline-sync');
 // TODO 1.1a: Define candidateName // 
 let candidateName = ('');
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question = ('1) Who was the first American woman in space? ');let correctAnswer = ('Sally Ride');
+let question = ('1) Who was the first American woman in space? ');
+let correctAnswer = ('Sally Ride');
 let candidateAnswer = ('');
 let questions = ['1) Who was the first American woman in space?',
 '2) True or False: 5 kilometers == 5000 meters?',
@@ -21,28 +22,41 @@ candidateName = input.question("Candidate, please enter your first and last name
 console.log('');
 }
 console.log('');
+
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 const input = require('readline-sync');
 for (let i = 0; i < questions.length; i++) {
   console.log(questions[i]);
-   (candidateAnswer = input.question('Your Answer: '));
+   (candidateAnswer = input.question('Your Answer: ').toUpperCase());
     (candidateAnswers.push(candidateAnswer));
 console.log(`Correct Answer: ${correctAnswers[i]}`);
 console.log();
-}
+  }
 
 }
 
 function gradeQuiz(candidateAnswers) {
-
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
-  let grade;
   
+  let grade = '';
+  let count = 0;
+  for (let i = 0; i < correctAnswers.length; i++){
+      if (candidateAnswers[i] === correctAnswers[i].toUpperCase()) {
+       count++;
+      } else {
+        }
+     grade = ((count)/5) *100;
+      }
+  console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<<`);
+      if (count >= 4){
+       console.log(`>>> Status: PASSED <<<`);
+     } else {
+       console.log(`>>> Status: FAILED <<<`);
+     }
   return grade;
-}
-
+  }  
+  
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
