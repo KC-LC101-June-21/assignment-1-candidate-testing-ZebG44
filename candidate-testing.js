@@ -8,10 +8,7 @@ let candidateName = ('');
 let question = ('1) Who was the first American woman in space? ');
 let correctAnswer = ('Sally Ride');
 let candidateAnswer = ('');
-let questions = ['1) Who was the first American woman in space?',
-'2) True or False: 5 kilometers == 5000 meters?',
-'3) (5+3)/2 * 10 = ?',
-'4) Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2?','5) What is the minimum crew size for the ISS?']; 
+let questions = ['1) Who was the first American woman in space? ', '2) True or False: 5 kilometers == 5000 meters? ', '3) (5+3)/2 * 10 = ?' , '4) Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2?' , '5) What is the minimum crew size for the ISS?']; 
 let correctAnswers = ['Sally Ride', 'true','40', 'Trajectory', '3'];
 let candidateAnswers = [];
 
@@ -28,21 +25,19 @@ function askQuestion() {
 const input = require('readline-sync');
 for (let i = 0; i < questions.length; i++) {
   console.log(questions[i]);
-   (candidateAnswer = input.question('Your Answer: ').toUpperCase());
+   (candidateAnswer = input.question('Your Answer: '));
     (candidateAnswers.push(candidateAnswer));
 console.log(`Correct Answer: ${correctAnswers[i]}`);
 console.log();
   }
-
 }
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  
   let grade = '';
   let count = 0;
   for (let i = 0; i < correctAnswers.length; i++){
-      if (candidateAnswers[i] === correctAnswers[i].toUpperCase()) {
+      if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()) {
        count++;
       } else {
         }
