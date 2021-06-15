@@ -39,8 +39,7 @@ function gradeQuiz(candidateAnswers) {
   for (let i = 0; i < correctAnswers.length; i++){
       if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()) {
        count++;
-      } else {
-        }
+      } 
      grade = ((count)/5) *100;
       }
   console.log(`>>> Overall Grade: ${grade}% (${count} of 5 responses correct) <<<`);
